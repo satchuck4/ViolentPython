@@ -20,7 +20,7 @@ class Displayer:
                         dic[pair] = 1
          #write csv:
         with open('arps.csv', 'wb') as csvfile:
-            writer = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_NONNUME                                                                                                                                                             RIC)
+            writer = csv.writer(csvfile, delimiter=',',quoting=csv.QUOTE_NONNUMERIC)
             writer.writerow(['source', 'target', 'value'])
             #output the dictionary
             for pair in dic:

@@ -26,7 +26,7 @@ class Displayer:
             for pair in dic:
                 if dic[pair] > 1:
                         writer.writerow([pair[0], pair[1], dic[pair]])
- if __name__ == '__main__':
+if __name__ == '__main__':
     dumpCall = ['/usr/bin/dumpcap', '-a', 'duration:30', '-i', 'eth0', '-w', '/tracefiles/arps.pcap']
     dumpProc = subprocess.call(dumpCall, stdout=subprocess.PIPE, stderr=None)
     Displayer().readpcap('/tracefiles/arps.pcap')
